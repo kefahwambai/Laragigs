@@ -7,7 +7,7 @@
             <p class="mb-4"> Post a gig to find a developer </p>
         </header>
 
-        <form methods="POST" action="/listings">
+        <form method="POST" action="/listings" enctype="multipart/form-data">
             @csrf 
             <div class="mb-6">
                 <label for="company"
@@ -19,6 +19,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="company"
+                    {{-- value={{old('company')}} --}}
                 />
                 @error('company')
                     <p class="text-red-500 text-xs mt1">{{$message}} </p>                    
@@ -33,6 +34,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="title"
+                    {{-- value={{old('title')}} --}}
                     placeholder="Example: Senior Laravel Developer"
                 />
                 @error('title')
@@ -43,6 +45,7 @@
             <div class="mb-6">
                 <label
                     for="location"
+                   
                     class="inline-block text-lg mb-2">
                     Job Location
                 </label>
@@ -50,6 +53,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="location"
+                    {{-- value={{old('location')}} --}}
                     placeholder="Example: Remote, Boston MA, etc"
                 />
                 @error('location')
@@ -65,6 +69,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="email"
+                    {{-- value={{old('email')}} --}}
                 />
                 @error('email')
                     <p class="text-red-500 text-xs mt1">{{$message}} </p>                    
@@ -81,6 +86,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="website"
+                    {{-- value={{old('website')}} --}}
                 />
                 @error('website')
                     <p class="text-red-500 text-xs mt1">{{$message}} </p>                    
@@ -102,7 +108,7 @@
                 @enderror
             </div>
 
-            {{-- <div class="mb-6">
+            <div class="mb-6">
                 <label for="logo" class="inline-block text-lg mb-2">
                     Company Logo
                 </label>
@@ -111,7 +117,10 @@
                     class="border border-gray-200 rounded p-2 w-full"
                     name="logo"
                 />
-            </div> --}}
+                @error('logo')
+                <p class="text-red-500 text-xs mt1">{{$message}} </p>                    
+                @enderror
+            </div>
 
             <div class="mb-6">
                 <label
@@ -124,9 +133,11 @@
                     class="border border-gray-200 rounded p-2 w-full"
                     name="description"
                     rows="10"
-                    placeholder="Include tasks, requirements, salary, etc"
-                ></textarea>
-                @error('desription')
+                    
+                    placeholder="Include tasks, requirements, salary, etc">
+                    {{-- {{old('company')}} --}}
+                </textarea>
+                @error('description')
                     <p class="text-red-500 text-xs mt1">{{$message}} </p>                    
                 @enderror
             </div>
