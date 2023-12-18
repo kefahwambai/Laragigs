@@ -71,5 +71,5 @@ Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
 //show Login
 Route::get('/login', [UserController::class, 'login'])->name('login')->middleware(('guest'));
 
-//Login User
+//Login Useree
 Route::post('/users/login', [UserController::class, 'loginUser']);
