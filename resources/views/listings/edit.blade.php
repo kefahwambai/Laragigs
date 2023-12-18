@@ -20,7 +20,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="company"
-                    value={{$listing->company}}
+                    value="{{$listing->company}}"
                 />
                 @error('company')
                     <p class="text-red-500 text-xs mt1">{{$message}} </p>                    
@@ -35,7 +35,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="title"
-                    value={{$listing->title}}
+                    value="{{$listing->title}}"
                     placeholder="Example: Senior Laravel Developer"
                 />
                 @error('title')
@@ -54,7 +54,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="location"
-                    value={{$listing->location}}
+                    value="{{$listing->location}}"
                     placeholder="Example: Remote, Boston MA, etc"
                 />
                 @error('location')
@@ -70,7 +70,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="email"
-                    value={{$listing->email}}
+                    value="{{$listing->email}}"
                 />
                 @error('email')
                     <p class="text-red-500 text-xs mt1">{{$message}} </p>                    
@@ -102,7 +102,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="tags"
-                    value={{$listing->tags}}
+                    value="{{$listing->tags}}"
                     placeholder="Example: Laravel, Backend, Postgres, etc"
                 />
                 @error('tags')
@@ -142,7 +142,7 @@
                     rows="10"
                     
                     placeholder="Include tasks, requirements, salary, etc">
-                    {{$listing->description}}
+                    "{{$listing->description}}"
                 </textarea>
                 @error('description')
                     <p class="text-red-500 text-xs mt1">{{$message}} </p>                    

@@ -19,7 +19,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="company"
-                    {{-- value={{old('company')}} --}}
+                    value="{{old('company')}}"
                 />
                 @error('company')
                     <p class="text-red-500 text-xs mt1">{{$message}} </p>                    
@@ -34,7 +34,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="title"
-                    {{-- value={{old('title')}} --}}
+                    value="{{old('title')}}"
                     placeholder="Example: Senior Laravel Developer"
                 />
                 @error('title')
@@ -53,7 +53,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="location"
-                    {{-- value={{old('location')}} --}}
+                    value="{{old('location')}}"
                     placeholder="Example: Remote, Boston MA, etc"
                 />
                 @error('location')
@@ -69,7 +69,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="email"
-                    {{-- value={{old('email')}} --}}
+                    value="{{old('email')}}"
                 />
                 @error('email')
                     <p class="text-red-500 text-xs mt1">{{$message}} </p>                    
@@ -86,7 +86,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="website"
-                    {{-- value={{old('website')}} --}}
+                    value="{{old('website')}}"
                 />
                 @error('website')
                     <p class="text-red-500 text-xs mt1">{{$message}} </p>                    
@@ -135,7 +135,7 @@
                     rows="10"
                     
                     placeholder="Include tasks, requirements, salary, etc">
-                    {{-- {{old('company')}} --}}
+                    "{{old('company')}}"
                 </textarea>
                 @error('description')
                     <p class="text-red-500 text-xs mt1">{{$message}} </p>                    
